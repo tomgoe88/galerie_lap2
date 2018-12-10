@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-2">
+
+  </div>
+  <div class="col-md-8">
+    <form enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="Bildname">Bildname: </label>
+        <input (change)="onChangeName($event)"  name="bildname" class="form-control" id="Bildname" aria-describedby="emailHelp" placeholder="Bildname eingeben...">
+        <div class="form-group">
+          <label for="beschreibung">Beschreibung: </label>
+          <textarea (change)="onChangeDiscription($event)" name="bildbeschreibung" class="form-control" rows="5" id="beschreibung"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="fileToUpload">Bilddatei: </label>
+          <input type="file" class="form-control-file" name="fileToUpload" id="fileToUpload"   (change)="onUploadImage($event)">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Bildgröße maximal 1,5 MB">Speichern</button>
+    </form>
+  </div>
+
+</div>
